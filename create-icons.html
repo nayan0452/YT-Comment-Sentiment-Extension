@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Icon Generator</title>
+</head>
+
+<body>
+    <h3>Icon Generator for YouTube Sentiment Extension</h3>
+    <p>Use this HTML file to generate icons. Open in browser and right-click to save the canvas as PNG.</p>
+
+    <canvas id="icon16" width="16" height="16"></canvas>
+    <canvas id="icon48" width="48" height="48"></canvas>
+    <canvas id="icon128" width="128" height="128"></canvas>
+
+    <script>
+        function drawIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+
+            // Background
+            ctx.fillStyle = '#1976d2';
+            ctx.fillRect(0, 0, size, size);
+
+            // Sentiment indicators
+            ctx.fillStyle = '#fff';
+            ctx.font = `${size / 3}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.fillText('😊', size / 2, size / 2 + size / 8);
+        }
+
+        drawIcon(document.getElementById('icon16'), 16);
+        drawIcon(document.getElementById('icon48'), 48);
+        drawIcon(document.getElementById('icon128'), 128);
+    </script>
+</body>
+
+</html>

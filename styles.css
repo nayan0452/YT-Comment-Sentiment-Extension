@@ -1,0 +1,79 @@
+/* YouTube Comment Sentiment Analyzer Styles */
+
+.sentiment-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 8px;
+  border: 2px solid;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+.sentiment-good {
+  color: #00c851;
+  border-color: #00c851;
+  background-color: rgba(0, 200, 81, 0.15);
+}
+
+.sentiment-bad {
+  color: #ff4444;
+  border-color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.15);
+}
+
+.sentiment-neutral {
+  color: #ffbb33;
+  border-color: #ffbb33;
+  background-color: rgba(255, 187, 51, 0.15);
+}
+
+.sentiment-icon {
+  font-size: 12px;
+}
+
+.sentiment-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Dark mode support */
+[dark] .sentiment-indicator {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+[dark] .sentiment-good {
+  background-color: rgba(0, 200, 81, 0.3);
+}
+
+[dark] .sentiment-bad {
+  background-color: rgba(255, 68, 68, 0.3);
+}
+
+[dark] .sentiment-neutral {
+  background-color: rgba(255, 187, 51, 0.3);
+}
+
+/* Animation for new indicators */
+.sentiment-indicator {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

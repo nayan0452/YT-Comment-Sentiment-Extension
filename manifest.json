@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Comment Sentiment Analyzer",
+  "version": "1.0",
+  "description": "Analyzes YouTube comments and displays sentiment indicators (Good/Bad/Neutral)",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["test-simple.js", "content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Sentiment Analyzer"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  }
+}
