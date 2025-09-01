@@ -110,7 +110,6 @@ Modify `styles.css` to customize:
 
 ## Future Enhancements
 
-- [ ] Integration with popular AI models (BERT, RoBERTa)
 - [ ] Batch processing for better performance
 - [ ] Comment thread sentiment aggregation
 - [ ] Export sentiment data
